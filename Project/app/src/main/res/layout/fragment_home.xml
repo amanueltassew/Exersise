@@ -5,12 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
-        android:textSize="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
 
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/search_src_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/hint">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               />
+       </com.google.android.material.textfield.TextInputLayout>
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_below="@id/search_src_text"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+   </RelativeLayout>
 </FrameLayout>
